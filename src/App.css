@@ -1,0 +1,118 @@
+.App {
+  text-align: center;
+  
+}
+
+body {
+  /* diameter of the circle */
+  --d: 4px; 
+  
+  background : radial-gradient(
+    circle at 
+       var(--d) 
+       var(--d), 
+       
+    #f0f0f0 calc(var(--d) - 1px), 
+    #cccccc00 var(--d)
+  ) 
+  0 0 / 50px 50px;
+}
+
+.Logo {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size:6rem;
+  margin-top:40vh;
+  margin-bottom:0;
+}
+
+.Logo > span {
+  opacity:1;
+  color:#ffbd59;
+}
+
+.Sublogo {
+  margin-top: 0;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size:1.6rem;
+ 
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.highlighted {
+  content:"";
+  background-color:#ffbd59;
+  width:80%;
+  height:1em;
+  padding-left:5px;
+  padding-right:5px;
+  z-index:-1;
+  filter:url(#marker-shape);
+  left:-0.25em;
+  top:0.1em;
+
+}
+
+.moreinfo {
+  margin-top:30px;
+  background-color: white;
+  width:160px;
+  color: #ffbd59; 
+  border: 2.5px solid #ffbd59; 
+  border-radius: 20px; 
+  padding: 10px 20px; 
+  font-size: 16px; 
+  cursor: pointer; 
+
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-size:1rem;
+
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.moreinfo:hover{
+  background-color: #ffbd59; /* Yellow background on hover */
+  color: white; /* White text on hover */
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
